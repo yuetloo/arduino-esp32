@@ -12,12 +12,12 @@
         {
           "name": "esp32",
           "architecture": "esp32",
-          "version": "",
+          "version": "2.0.0",
           "category": "ESP32",
-          "url": "",
-          "archiveFileName": "",
-          "checksum": "",
-          "size": "",
+          "url": "https://github.com/yuetloo/arduino-esp32/releases/download/2.0.0/esp32-2.0.0.zip",
+          "archiveFileName": "esp32-2.0.0.zip",
+          "checksum": "SHA-256:33c705bb48a2c0db8dcc5a6cd06221ae9aa0d9b28b0c79ce88ff88856c940377",
+          "size": "36859243",
           "help": {
             "online": ""
           },

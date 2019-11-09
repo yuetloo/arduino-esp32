@@ -200,13 +200,23 @@ if [ $? -ne 0 ]; then echo "ERROR: Failed to create $PACKAGE_ZIP ($?)"; exit 1; 
 
 # Calculate SHA-256
 echo "Calculating SHA sum ..."
-PACKAGE_PATH="$OUTPUT_DIR/$PACKAGE_ZIP"
+PACKAGE_PATH="https://github.com/$GITHUB_REPOSITORY/releases/download/$RELEASE_TAG/$PACKAGE_ZIP"
 PACKAGE_SHA=`shasum -a 256 "$PACKAGE_ZIP" | cut -f 1 -d ' '`
 PACKAGE_SIZE=`get_file_size "$PACKAGE_ZIP"`
 popd >/dev/null
 rm -rf "$PKG_DIR"
 echo "'$PACKAGE_ZIP' Created! Size: $PACKAGE_SIZE, SHA-256: $PACKAGE_SHA"
+echo "url: $PACKAGE_PATH"
 echo
+
+echo "Update package json file"
+cat "$GITHUB_WORKSPACE/package/package_esp32_index.template.json" | \
+sed "s/\"version\": \"\"/\"version\": \"$RELEASE_TAG\"/" | \
+sed "s/\"checksum\": \"\"/\"checksum\": \"SHA-256:$PACKAGE_SHA\"/" | \
+sed "s/\"archiveFileName\": \"\"/\"archiveFileName\": \"$PACKAGE_ZIP\"/" | \
+sed "s/\"url\": \"\"/\"url\": \"${PACKAGE_PATH//\//\\/}\"/" | \
+sed "s/\"size\": \"\"/\"size\": \"$PACKAGE_SIZE\"/"  \
+> "$GITHUB_WORKSPACE/package/package_esp32_index.json"
 
 
 ##
