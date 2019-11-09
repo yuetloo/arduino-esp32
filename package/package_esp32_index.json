@@ -10,14 +10,14 @@
         {
           "category": "ESP32",
           "name": "esp32nimble",
-          "url": "https://github.com/yuetloo/arduino-esp32/releases/download/1.0.4/esp32-1.0.4.zip",
-          "checksum": "SHA-256:d9108bf873933c4e48a3ca401fb51e41b2cc3f98d7c9b9be9881e7ca34bf0efe",
+          "url": "https://github.com/yuetloo/arduino-esp32/releases/download/2.0.0/esp32-2.0.0.zip",
+          "checksum": "SHA-256:03c29f3f09edffef97a9c463978ffae18d233ebd72b683851b25daa49dbedae9",
           "help": {
             "online": ""
           },
           "version": "2.0.0",
           "architecture": "esp32",
-          "archiveFileName": "esp32-1.0.4.zip",
+          "archiveFileName": "esp32-2.0.0.zip",
           "boards": [
             {
               "name": "ESP32 Dev Module"
