@@ -17,11 +17,6 @@ echo "Output: $OUTPUT_DIR"
 echo "ID: $RELEASE_ID" 
 echo "Tag: $RELEASE_TAG"
 
-if [ "$GITHUB_TOKEN" == "" ]; then
-   echo "GITHUB_TOKEN not defined"
-   exit
-fi
-
 function get_file_size(){
     local file="$1"
     if [[ "$OSTYPE" == "darwin"* ]]; then
