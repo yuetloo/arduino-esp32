@@ -13,6 +13,7 @@
 // limitations under the License.
 
 #include "sdkconfig.h"
+#include "nvs_flash.h"
 #include "esp32-hal-log.h"
 #include "esp32-hal-bt.h"
 #include "esp_nimble_hci.h"

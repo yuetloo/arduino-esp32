@@ -16,8 +16,8 @@
           "category": "ESP32",
           "url": "https://github.com/yuetloo/arduino-esp32/releases/download/2.0.0/esp32-2.0.0.zip",
           "archiveFileName": "esp32-2.0.0.zip",
-          "checksum": "SHA-256:99f9a97bef01ca0244971bf671ed5382224cbdbab3376a8e588129fc9495a0f2",
-          "size": "34227642",
+          "checksum": "SHA-256:325e2bf46f96778d11040c2d5e8d06431cacdcbb4df082348c2577ef6d65df34",
+          "size": "34225474",
           "help": {
             "online": ""
           },
